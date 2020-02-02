@@ -5,14 +5,15 @@
     <link rel="stylesheet" type="text/css" href="./css/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="./css/lightgallery.css">
     <link rel="stylesheet" type="text/css" href="./css/cplus.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700&display=swap" rel="stylesheet"> 
     <title>Capable + Creative – Excellent UX Design and Front End Development</title>
 </head>
 <body>
     <section id="home-body" class="container-fluid">
         <div class="row">
 <!-- #ani-portrait will animate using basic set-interval to transition background iamges afer 5 seconds -->                
-            <div id="ani-portrait" class="portrait col-md-6">
-                <img src="img/mouse-fire.png" id="digiPortrait" alt="Creative Portrait Demo - SLF" style="opacity: 1;">
+            <div id="mouseFade" class="portrait col-md-6">
+                <img src="img/mouse-fire.png" id="mouse" alt="Creative Portrait Demo - SLF"/ >
             </div>
             <div id="dsk-nav" class="dsk-nav col-md-6">
                 <div class="column home-info-block">
@@ -60,7 +61,7 @@
             <span class="solutions">Solutions</span>
         </h1>
     </section>
-    <section id="services">
+    <section id="services" class="reversed">
         <div class="container-fluid">
             <div class="row">
                 <div class="container">
@@ -308,7 +309,7 @@
     <script src="./js/dom/cplus.js"></script>
     <!-- Lightbox Scripts -- Let's replace this with a custom solution by 2/14/2020 - SLF ----------------------------->
    <!-- <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script> -->
-    <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+   <!-- <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
     <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
     <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
     <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
@@ -318,5 +319,5 @@
     <script>
         lightGallery(document.getElementById('lightgallery'));
     </script>
-
+-->
 </body>
