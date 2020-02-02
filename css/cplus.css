@@ -1,0 +1,422 @@
+/* --- Capable + Creative - Primary CSS ----------------------- 
+    + Supporting CSS
+        - Bootstrap 4.0 (flex-based)
+        - Normalize CSS (browser user agent sheets reset)
+    + Font families (add via SASS later)
+        - BODY: font-family: 'Helvetica Neue', arial, helvetica, sans-serif;
+        - HEADERS: font-family: 'Montserrat', 'Helvetica Neue', arial, helvetica, sans-serif;
+    + Colors
+        - C+C Red: #ED3B27
+        - C+C Blue: 
+------------------------------------------------------------ */
+html {
+    scroll-behavior: smooth;
+}
+body {
+    justify-content: space-around;
+    font-size: 16px;
+    position: relative;
+}
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+#home-body {
+    position: relative;
+    z-index: 4;
+    background: url('../img/01-whitepaper.png') #FFF;
+    height: 100vh;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+body, p, ul, ol {
+    color: #000;
+}
+a {
+    color: #FFF;
+    transition: all .5s ease .125s;
+}
+p a, ul a, li a, ol a {
+    color: #3499CC;
+    text-decoration: underline;
+    }
+h1 {
+    color: #3499CC;
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-weight: 200;
+    font-size: 3rem;
+    line-height: 3rem;
+    }
+    #home-body h1{
+        margin-top: 40px;
+    }
+h4 {
+    font-weight: 700;
+}
+orange {
+    color: #ED3B27;
+}
+blue  {
+    color: #3499CC;
+}
+.fullVh {
+    min-height: 100vh;
+    justify-content: space-around;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+a:hover {
+    text-decoration: none;
+}
+#cplusLogo {
+    max-width: 400px;
+}
+#ani-portrait{
+    display: flex;
+    justify-content: space-around;
+    min-height: 100vh;
+    transition: all 1s ease .25s;
+    background: url('../img/mouse.png') no-repeat center center;
+    background-size: contain;
+    flex-direction: column;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+#digiPortrait {
+    max-height: 100vh;
+    margin: 0px auto;
+    opacity: 0.0;
+    transition: all 3s ease .25s;
+}   
+.dsk-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 100vh;
+}
+.dsk-nav ul {
+    list-style: none;
+    margin-left: -30px;
+    padding-right: 1px;
+}
+.dsk-nav ul li a{
+    color: #000;
+    font-size: 1.5rem;
+    line-height: 4rem;
+    transition: color .5s;
+    text-decoration: none;
+    }
+    .dsk-nav ul li a:hover {
+        color: #3499CC;
+    }
+.dsk-nav ul li img{
+    max-width: 30px;
+    margin-left: 40px;
+    opacity: 0.0;
+    transition: all .5s ease .125s;
+    }
+    .dsk-nav ul li:hover img {
+        opacity: 1.0;
+        margin-left: 0px;
+    }
+#tagline{
+    color: #000;
+    opacity: 0.0;
+    transition: all 2s ease .125s;
+    font-size: 2.0rem;
+}
+span.thoughtful {
+    font-family: 'Montserrat','Garamond', 'Times New Roman', Times, serif;
+    color: #ED3B27;
+    font-style: italic;
+}
+
+
+/* -- Services Section -------------------------- */
+#services {
+    background: url('../img/octopus.png') no-repeat left center #111;
+    transition: all .25s;
+    background-attachment: fixed;
+    border-top: 3px solid #666;
+}
+.section-title {
+    font-family: 'Montserrat','Garamond', 'Times New Roman', Times, serif;
+    color: #ED3B27;
+    padding: 80px 0px 30px;
+    width: 100%;
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+    font-style: italic;
+    border-bottom: 3px dotted #666;
+    margin-bottom: 40px;
+}
+.sub-section-title {
+    padding: 20px;
+    width: 100%;
+    display: block;
+    font-size: 1rem;
+    text-align: center;
+}
+.job, .summary-text {
+    padding: 20px;
+    margin: 20px 0px;
+}
+.job .job-role {
+    color: #3499CC;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.3rem;
+    }
+.job .job-dates {
+    font-style: italic;
+}
+.job .employer {
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: .75rem;
+}
+
+/* -- Portfolio Section --------------- */
+#portfolio {
+    background: #3499CC; 
+}
+#portfolio .section-title {
+    color: #FFF;
+    border-bottom: #000 dotted 3px;
+}
+#portfolio .port-row {
+    background: #000;
+}
+
+.port-section {
+    padding-bottom: 40px;
+}
+.port-item {
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: all .5s;
+    }
+    .port-item-1 {
+        background: url('../img/thumb_jc.jpg') center top;
+        background-size: cover;
+    }
+    .port-item-2 {
+        background: url('../img/thumb_bb.jpg') center top;
+        background-size: cover;
+    }
+    .port-item-3 {
+        background: url('../img/thumb_ss.jpg') center top;
+        background-size: cover;
+    }
+    .port-item-4 {
+        background: url('../img/thumb_nwln.png') center top;
+        background-size: cover;
+    }
+    .port-item-5 {
+        background: url('../img/thumb_cf.png') center top;
+        background-size: cover;
+    }
+    .port-item-6 {
+        background: url('../img/thumb_rjm.png') center top;
+        background-size: cover;
+    }
+.port-item-btn {
+    align-self: center;
+    background: #3499CC;
+    font-weight: 700;
+    border: 1px solid #FFF;
+    opacity: 0.0;
+    transition: all .5s;
+}
+.port-item:hover > .port-item-btn {
+    opacity: 1.0;
+}
+.port-item {
+    opacity: 0.6;
+}
+.port-item:hover {
+    opacity: 1.0;
+}
+
+/* -- References Section ---------------------------- */
+
+#references {
+    background: url('../img/golden-spiral.jpg') no-repeat center bottom #171717;
+    background-attachment: fixed;
+    background-size: 90%;
+}
+.reference-section {
+    padding: 20px;
+}
+.tom, .andrew, .tracy {
+    height: 200px;
+    width: 200px;
+    border-radius: 200px;
+    border: 1px solid #FFF;
+}
+.tom {
+    background: url('../img/tom.png') no-repeat center center;
+    background-size: cover;
+}
+.andrew {
+    background: url('../img/andrew.png') no-repeat center center;
+    background-size: cover;
+}
+.tracy {
+    background: url('../img/tracy.png') no-repeat center center;
+    background-size: cover;
+}
+
+/* -- Z-Indexed / Mobile Navigation ------------- */
+
+
+/* -- Footer Section ---------------------------- */
+
+#ccFooter img {
+    margin: 40px auto;
+    fill: #FFF;
+    max-width: 250px;
+    opacity: 0.5;
+    display:block;
+    filter: contrast(.5);
+}
+@media screen and (min-width: 760px) {
+    #tagline {
+        position: absolute;
+        bottom: 0px;
+        padding: 20px 0px;
+        background: #FFF;
+        margin: 0px;
+        display: inline-flex;
+        align-self: center;
+        width: 100%;
+        justify-content: center;
+      }
+    #mobileNav {
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        background: #EB893C;
+        border-bottom: 3px solid #C57A3B;
+        height: 70px;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        font-weight: 700;
+        z-index: 2;
+        line-height: 70px;
+        font-family: 'Montserrat', 'Helvetica Neue', helvetica, sans-serif;
+      }
+      #mobileNav div.col-md-4 {
+        justify-content: center;
+        text-align:center;
+        position: relative;
+      } 
+      #mobileNav div.col-md-4 a {
+          transform: translateY(0px);
+          transition: all .25s;
+          position: absolute;
+          text-shadow: 0px 2.5px 3px rgba(0,0,0,0.5);
+      }
+      #mobileNav div.col-md-4 a:hover {
+          color: #FFF;
+          transform: translateY(5px);
+          text-shadow: none;
+      }
+}
+@media screen and (max-width: 760px) {
+    section {
+        padding: 20px;
+    }
+    .home-info-block{
+        padding: 20px 10px 20px 20px;
+        margin-left: -20px;
+        height: 80px;
+        border-bottom: 3px solid #3499CC;
+        top: 0px;
+        background: #000;
+    }
+    credits {
+        position: relative;
+        top: -95px;
+        left: -15px;
+    }
+    #home-body {
+        z-index: 3;
+    }
+    .dsk-nav {
+        min-height: 1px;
+    }
+    .home-info-block {
+        position: fixed;
+        width: 101%;
+        top: 0px;
+        z-index: 5;
+        background: #FFF;
+    }
+    #mobileNav{
+        background: #3499CC;
+        z-index: 4;
+        height: 65px;
+        bottom: 0px;
+        border-top: 3px solid #069;
+        padding-top: 10px;
+        position: fixed;
+        width: 100%;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        display: flex;
+        justify-content: space-around;
+    }
+    #mobileNav div {
+        text-align: center;
+        text-transform: uppercase;
+        padding: 0px 15px;
+        font-weight: 700;
+        font-size: .75rem;
+        line-height: 2.5rem;
+        flex-wrap: nowrap;
+        background: url('/img/svg/plus.svg');
+        background-size: contain;
+    }
+    a:hover{
+        color: #3499CC !important;
+    }
+    #tagline {
+        left: 15%;
+    }
+    #cplusLogo {
+        max-width: 100px;
+    }
+    .nav-wrapper {
+       display: none;
+    }
+    credits {
+        font-size: 2rem;
+        text-align: right;
+    }
+    credits h1, credits h2, credits p {
+        font-size: .75rem;
+        line-height: .75rem;
+    }
+    #tagline {
+        position: absolute;
+        font-size: 1.5rem;
+        line-height: 2.0rem;
+        right: 5%;
+        top: 50px;
+        text-align: right;
+      }
+      #tagline .thoughtful {
+        font-size: 1.5rem;
+        display: block;
+      }
+      #home-body {
+        margin-top: 30px;
+      }
+}
