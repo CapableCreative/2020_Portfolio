@@ -21,6 +21,13 @@ body {
     margin-left: 0px;
     margin-right: 0px;
 }
+.container-fluid {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+section {
+    padding-bottom: 80px;
+}
 #home-body {
     position: relative;
     z-index: 4;
@@ -40,9 +47,11 @@ p a, ul a, li a, ol a {
     color: #3499CC;
     text-decoration: underline;
     }
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
 h1 {
     color: #3499CC;
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
     font-weight: 200;
     font-size: 3rem;
     line-height: 3rem;
@@ -107,6 +116,7 @@ a:hover {
     padding-right: 1px;
 }
 .dsk-nav ul li a{
+    font-family: 'Montserrat','Helvetica Neue', helvetica, arial, sans-serif;
     color: #000;
     font-size: 1.5rem;
     line-height: 4rem;
@@ -136,6 +146,9 @@ span.thoughtful {
     font-family: 'Montserrat','Garamond', 'Times New Roman', Times, serif;
     color: #ED3B27;
     font-style: italic;
+    font-weight: 700;
+    font-size: 2.5rem;
+    letter-spacing: -2px;
 }
 
 
@@ -146,34 +159,45 @@ span.thoughtful {
     background-attachment: fixed;
     border-top: 3px solid #666;
 }
+.section-head-plus {
+    margin-bottom: 40px;
+}
 .section-title {
-    font-family: 'Montserrat','Garamond', 'Times New Roman', Times, serif;
     color: #ED3B27;
-    padding: 80px 0px 30px;
+    padding: 80px 0px 0px;
     width: 100%;
     display: block;
     font-weight: 700;
-    font-size: 3rem;
-    font-style: italic;
-    border-bottom: 3px dotted #666;
-    margin-bottom: 40px;
+    font-size: 5rem;
+    line-height: 5rem;
+    margin-bottom: 10px;
+    text-shadow: -2px 2px 0px rgba(0,0,0,0.5);
+}
+.section-subtitle {
+    border-top: 2px solid #FFF;
+    padding-top: 10px;
+    margin-bottom: 20px;
 }
 .sub-section-title {
-    padding: 20px;
     width: 100%;
     display: block;
     font-size: 1rem;
     text-align: center;
 }
-.job, .summary-text {
-    padding: 20px;
-    margin: 20px 0px;
+.summary-title {
+    border-bottom: 1px solid #FFF;
+    padding-bottom: 5px;
+}
+.resume-section {
+    background: rgba(0,0,0,0.3);
+    padding: 30px;
+    margin-bottom: 30px;
 }
 .job .job-role {
     color: #3499CC;
     font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 1.3rem;
+    font-size: 1.0rem;
+    line-height: 1.5rem;
     }
 .job .job-dates {
     font-style: italic;
@@ -182,22 +206,19 @@ span.thoughtful {
     font-size: 1rem;
     font-weight: 500;
     line-height: .75rem;
+    font-style: italic;
 }
 
 /* -- Portfolio Section --------------- */
 #portfolio {
     background: #3499CC; 
+    border-top: 5px solid #069;
 }
 #portfolio .section-title {
     color: #FFF;
-    border-bottom: #000 dotted 3px;
 }
 #portfolio .port-row {
     background: #000;
-}
-
-.port-section {
-    padding-bottom: 40px;
 }
 .port-item {
     height: 300px;
@@ -251,7 +272,6 @@ span.thoughtful {
 /* -- References Section ---------------------------- */
 
 #references {
-    background: url('../img/golden-spiral.jpg') no-repeat center bottom #171717;
     background-attachment: fixed;
     background-size: 90%;
 }
@@ -286,10 +306,129 @@ span.thoughtful {
     margin: 40px auto;
     fill: #FFF;
     max-width: 250px;
-    opacity: 0.5;
     display:block;
-    filter: contrast(.5);
+    filter: contrast(.0);
 }
+
+/* -- LIGHTBOX GALLERY -------------------------- */
+body{
+    background-color: #152836
+}
+.cplus-gallery > ul {
+  margin-bottom: 0;
+}
+.cplus-gallery > ul > li {
+    float: left;
+    margin-bottom: 15px;
+    width: 200px;
+}
+.cplus-gallery > ul > li a {
+  border-radius: 3px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  float: left;
+}
+.cplus-gallery > ul > li a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+.cplus-gallery > ul > li a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.cplus-gallery > ul > li a:hover .cplus-gallery-poster > img {
+  opacity: 1;
+}
+.cplus-gallery > ul > li a .cplus-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+.cplus-gallery > ul > li a .cplus-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.cplus-gallery > ul > li a:hover .cplus-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cplus-gallery .justified-gallery > a > img {
+  -webkit-transition: -webkit-transform 0.15s ease 0s;
+  -moz-transition: -moz-transform 0.15s ease 0s;
+  -o-transition: -o-transform 0.15s ease 0s;
+  transition: transform 0.15s ease 0s;
+  -webkit-transform: scale3d(1, 1, 1);
+  transform: scale3d(1, 1, 1);
+  height: 100%;
+  width: 100%;
+}
+.cplus-gallery .justified-gallery > a:hover > img {
+  -webkit-transform: scale3d(1.1, 1.1, 1.1);
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+.cplus-gallery .justified-gallery > a:hover .cplus-gallery-poster > img {
+  opacity: 1;
+}
+.cplus-gallery .justified-gallery > a .cplus-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.1);
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  -webkit-transition: background-color 0.15s ease 0s;
+  -o-transition: background-color 0.15s ease 0s;
+  transition: background-color 0.15s ease 0s;
+}
+.cplus-gallery .justified-gallery > a .cplus-gallery-poster > img {
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transition: opacity 0.3s ease 0s;
+  -o-transition: opacity 0.3s ease 0s;
+  transition: opacity 0.3s ease 0s;
+}
+.cplus-gallery .justified-gallery > a:hover .cplus-gallery-poster {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.cplus-gallery .video .cplus-gallery-poster img {
+  height: 48px;
+  margin-left: -24px;
+  margin-top: -24px;
+  opacity: 0.8;
+  width: 48px;
+}
+.cplus-gallery.dark > ul > li a {
+  border: 3px solid #04070a;
+}
+.home .cplus-gallery {
+  padding-bottom: 80px;
+}
+
+
+
 @media screen and (min-width: 760px) {
     #tagline {
         position: absolute;
@@ -301,13 +440,22 @@ span.thoughtful {
         align-self: center;
         width: 100%;
         justify-content: center;
+        filter: drop-shadow()
+      }
+      #mobileNav img {
+          display: inline-flex;
+          max-width: 150px;
+          padding-top: 10px;
+          align-self: center;
+          justify-self: center;
+          filter: contrast(0%) brightness(200%);
       }
     #mobileNav {
         position: fixed;
         top: 0px;
         width: 100%;
-        background: #EB893C;
-        border-bottom: 3px solid #C57A3B;
+        background: #ED3B27;
+        border-bottom: 3px solid #900;
         height: 70px;
         font-size: 1.5rem;
         text-transform: uppercase;
@@ -316,18 +464,18 @@ span.thoughtful {
         line-height: 70px;
         font-family: 'Montserrat', 'Helvetica Neue', helvetica, sans-serif;
       }
-      #mobileNav div.col-md-4 {
+      #mobileNav div {
         justify-content: center;
         text-align:center;
         position: relative;
       } 
-      #mobileNav div.col-md-4 a {
+      #mobileNav div a {
           transform: translateY(0px);
           transition: all .25s;
           position: absolute;
           text-shadow: 0px 2.5px 3px rgba(0,0,0,0.5);
       }
-      #mobileNav div.col-md-4 a:hover {
+      #mobileNav div a:hover {
           color: #FFF;
           transform: translateY(5px);
           text-shadow: none;
