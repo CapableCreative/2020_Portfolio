@@ -31,10 +31,12 @@ section {
 #home-body {
     position: relative;
     z-index: 4;
-    background: url('../img/01-whitepaper.png') #FFF;
+    background: url('../img/abstract.jpg') #FFF;
+    background-size: cover;
     height: 100vh;
     padding-left: 0px;
     padding-right: 0px;
+    background-attachment: fixed;
 }
 body, p, ul, ol {
     color: #000;
@@ -150,7 +152,24 @@ span.thoughtful {
     font-size: 2.5rem;
     letter-spacing: -2px;
 }
-
+/* -- Profile Links ----------------------------- */
+#profileLinks {
+    position: fixed;
+    z-index: 6;
+    bottom: 50vh;
+    right: -10px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #FFF;
+    border-radius: 200px 0px 0px 200px;
+    padding: 30px;
+    background: rgba(52,153,204,0.9);
+}
+#profileLinks img {
+    width: 30px;
+    height: auto;
+    margin: 10px 0px;
+}
 
 /* -- Services Section -------------------------- */
 #services {
@@ -158,9 +177,6 @@ span.thoughtful {
     transition: all .25s;
     background-attachment: fixed;
     border-top: 3px solid #666;
-}
-.section-head-plus {
-    margin-bottom: 40px;
 }
 .section-title {
     color: #ED3B27;
@@ -176,7 +192,7 @@ span.thoughtful {
 .section-subtitle {
     border-top: 2px solid #FFF;
     padding-top: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .sub-section-title {
     width: 100%;
@@ -208,7 +224,10 @@ span.thoughtful {
     line-height: .75rem;
     font-style: italic;
 }
-
+.web .port-item {
+    margin-bottom: 30px;
+    border-radius: 5px;;
+}
 /* -- Portfolio Section --------------- */
 #portfolio {
     background: #3499CC; 
@@ -216,9 +235,6 @@ span.thoughtful {
 }
 #portfolio .section-title {
     color: #FFF;
-}
-#portfolio .port-row {
-    background: #000;
 }
 .port-item {
     height: 300px;
@@ -263,7 +279,7 @@ span.thoughtful {
     opacity: 1.0;
 }
 .port-item {
-    opacity: 0.6;
+    opacity: 0.8;
 }
 .port-item:hover {
     opacity: 1.0;
@@ -278,23 +294,30 @@ span.thoughtful {
 .reference-section {
     padding: 20px;
 }
-.tom, .andrew, .tracy {
+.mike, .josh, .mandy {
     height: 200px;
     width: 200px;
-    border-radius: 200px;
+    border-radius: 0px 200px 200px 200px;
     border: 1px solid #FFF;
+    margin: 0px 15px 30px;
 }
-.tom {
-    background: url('../img/tom.png') no-repeat center center;
+.referer i {
+    font-weight: 300;
+}
+.mike {
+    background: url('../img/mike.png') no-repeat center center;
     background-size: cover;
 }
-.andrew {
-    background: url('../img/andrew.png') no-repeat center center;
+.josh {
+    background: url('../img/josh.jpg') no-repeat center center;
     background-size: cover;
 }
-.tracy {
-    background: url('../img/tracy.png') no-repeat center center;
+.mandy {
+    background: url('../img/mandy.jpg') no-repeat center center;
     background-size: cover;
+}
+.port-section.web .row {
+    margin: 0px 15px;
 }
 
 /* -- Z-Indexed / Mobile Navigation ------------- */
@@ -302,6 +325,11 @@ span.thoughtful {
 
 /* -- Footer Section ---------------------------- */
 
+#ccFooter {
+    background: url('../img/01-whitepaper.png') #FFF;
+    border-top: 5px solid #3499CC;
+    padding: 20px;
+}
 #ccFooter img {
     margin: 40px auto;
     fill: #FFF;
@@ -426,21 +454,32 @@ body{
 .home .cplus-gallery {
   padding-bottom: 80px;
 }
-
-
+#lightgallery {
+    padding: 15px;
+}
+#lightgallery li {
+    height: 250px !important;
+    margin-bottom: 30px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+#lightgallery li img {
+    object-fit:contain;
+    border-radius: 5px;
+}
 
 @media screen and (min-width: 760px) {
     #tagline {
         position: absolute;
         bottom: 0px;
         padding: 20px 0px;
-        background: #FFF;
+        background: url('../img/00-whitepaper.jpg') #FFF;
         margin: 0px;
         display: inline-flex;
         align-self: center;
         width: 100%;
         justify-content: center;
-        filter: drop-shadow()
+        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
       }
       #mobileNav img {
           display: inline-flex;
@@ -472,7 +511,6 @@ body{
       #mobileNav div a {
           transform: translateY(0px);
           transition: all .25s;
-          position: absolute;
           text-shadow: 0px 2.5px 3px rgba(0,0,0,0.5);
       }
       #mobileNav div a:hover {
