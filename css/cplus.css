@@ -297,7 +297,7 @@ span.thoughtful {
 .reference-section {
     padding: 20px;
 }
-.mike, .josh, .mandy {
+.refer-head {
     height: 200px;
     width: 200px;
     border-radius: 0px 200px 200px 200px;
@@ -316,8 +316,12 @@ span.thoughtful {
     background-size: cover;
 }
 .mandy {
-    background: url('../img/mandy.jpg') no-repeat center center;
+    background: url('../img/Brett.png') no-repeat center center;
     background-size: cover;
+}
+.brandon {
+    background: url('../img/Brandon.jpg') no-repeat center center;
+    background-size: contain;
 }
 .port-section.web .row {
     margin: 0px 15px;
@@ -501,11 +505,12 @@ body{
         background: #ED3B27;
         border-bottom: 3px solid #900;
         height: 70px;
-        font-size: 1.5rem;
+        font-size: 1.0rem;
+        letter-spacing: 1px;
         text-transform: uppercase;
-        font-weight: 700;
+        font-weight: 500;
         z-index: 2;
-        line-height: 70px;
+        line-height: 80px;
         font-family: 'Montserrat', 'Helvetica Neue', helvetica, sans-serif;
       }
       #mobileNav div {
@@ -516,7 +521,7 @@ body{
       #mobileNav div a {
           transform: translateY(0px);
           transition: all .25s;
-          text-shadow: 0px 2.5px 3px rgba(0,0,0,0.5);
+          text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
       }
       #mobileNav div a:hover {
           color: #FFF;
