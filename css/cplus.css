@@ -225,8 +225,23 @@ span.thoughtful {
     font-style: italic;
 }
 .web .port-item {
+    padding-top: 200px;
     margin-bottom: 30px;
     border-radius: 5px;;
+}
+.web .port-item .port-deets {
+    padding: 20px 20px 30px;
+    background: #FAFAFA;
+    box-shadow: 0px -0px 5px rgba(0,0,0,0.5);
+    width: 100%;
+}
+.web .port-item .port-deets h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #3499CC;
+}
+.web .port-item .port-deets ul {
+    font-size: .8rem;
 }
 /* -- Portfolio Section --------------- */
 #portfolio {
@@ -237,35 +252,34 @@ span.thoughtful {
     color: #FFF;
 }
 .port-item {
-    height: 300px;
     justify-content: center;
     align-items: center;
     display: flex;
     transition: all .5s;
     }
     .port-item-1 {
-        background: url('../img/thumb_jc.jpg') center top;
-        background-size: cover;
+        background: url('../img/thumb_jc.jpg') center top no-repeat #FFF;
+        background-size: contain;
     }
     .port-item-2 {
-        background: url('../img/thumb_bb.jpg') center top;
-        background-size: cover;
+        background: url('../img/thumb_bb.jpg') center top no-repeat #FFF;
+        background-size: contain;
     }
     .port-item-3 {
-        background: url('../img/thumb_ss.jpg') center top;
-        background-size: cover;
+        background: url('../img/thumb_ss.jpg') center top no-repeat #FFF;
+        background-size: contain;
     }
     .port-item-4 {
-        background: url('../img/thumb_nwln.png') center top;
-        background-size: cover;
+        background: url('../img/thumb_nwln.png') center top no-repeat #FFF;
+        background-size: contain;
     }
     .port-item-5 {
-        background: url('../img/thumb_cf.png') center top;
-        background-size: cover;
+        background: url('../img/thumb_cf.png') center top no-repeat #FFF;
+        background-size: contain;
     }
     .port-item-6 {
-        background: url('../img/thumb_rjm.png') center top;
-        background-size: cover;
+        background: url('../img/thumb_rjm.png') center top no-repeat #FFF;
+        background-size: contain;
     }
 .port-item-btn {
     align-self: center;
@@ -476,6 +490,19 @@ body{
     object-fit:contain;
     border-radius: 5px;
 }
+#lightgallery li a button {
+    position: absolute;
+    top: 0px;
+    left: 0%;
+    border-radius: 5px;
+    border: none;
+    background: rgba(52,153,204,0.7);
+    color: #FFF;
+    font-size: 2rem;
+    }
+    #lightgallery li a button:hover {
+        background: #3499CC;
+    }
 vers a {
     color: #069;
     text-decoration: underline;
