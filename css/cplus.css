@@ -476,7 +476,10 @@ body{
     object-fit:contain;
     border-radius: 5px;
 }
-
+vers a {
+    color: #069;
+    text-decoration: underline;
+}
 @media screen and (min-width: 760px) {
     #tagline {
         position: absolute;
