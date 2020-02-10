@@ -4,7 +4,7 @@
         - Normalize CSS (browser user agent sheets reset)
     + Font families (add via SASS later)
         - BODY: font-family: 'Helvetica Neue', arial, helvetica, sans-serif;
-        - HEADERS: font-family: 'Montserrat', 'Helvetica Neue', arial, helvetica, sans-serif;
+        - HEADERS: font-family: 'Helvetica Neue', 'Helvetica Neue', arial, helvetica, sans-serif;
     + Colors
         - C+C Red: #ED3B27
         - C+C Blue: 
@@ -38,6 +38,11 @@ section {
     padding-right: 0px;
     background-attachment: fixed;
 }
+hr {
+    color: rgba(0,0,0,0.3);
+    border-color: rgba(0,0,0,0.3);
+    margin: 40px 0px;
+}
 body, p, ul, ol {
     color: #000;
 }
@@ -50,7 +55,7 @@ p a, ul a, li a, ol a {
     text-decoration: underline;
     }
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', 'Helvetica Neue', Arial, Helvetica, sans-serif;
+    font-family: 'Helvetica Neue', 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 h1 {
     color: #3499CC;
@@ -60,6 +65,15 @@ h1 {
     }
     #home-body h1{
         margin-top: 40px;
+    }
+h3 {
+    color: #ED3B27;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    }
+    h3 i {
+        font-weight: 300;
     }
 h4 {
     font-weight: 700;
@@ -102,7 +116,7 @@ a:hover {
     max-height: 100vh;
     margin: 0px auto;
     opacity: 0.0;
-    transition: all 3s ease .25s;
+    transition: all 1s ease .25s;
     filter: blur(100px);
 }   
 .dsk-nav {
@@ -118,7 +132,7 @@ a:hover {
     padding-right: 1px;
 }
 .dsk-nav ul li a{
-    font-family: 'Montserrat','Helvetica Neue', helvetica, arial, sans-serif;
+    font-family: 'Helvetica Neue','Helvetica Neue', helvetica, arial, sans-serif;
     color: #000;
     font-size: 1.5rem;
     line-height: 4rem;
@@ -145,7 +159,7 @@ a:hover {
     font-size: 2.0rem;
 }
 span.thoughtful {
-    font-family: 'Montserrat','Garamond', 'Times New Roman', Times, serif;
+    font-family: 'Helvetica Neue','Garamond', 'Times New Roman', Times, serif;
     color: #ED3B27;
     font-style: italic;
     font-weight: 700;
@@ -157,12 +171,11 @@ span.thoughtful {
     position: fixed;
     z-index: 6;
     bottom: 60vh;
-    right: -10px;
+    right: 0px;
     display: flex;
     flex-direction: column;
-    border: 1px solid #FFF;
-    border-radius: 10px 0px 0px 10px;
-    padding: 10px;
+    border-radius: 10px 0px 10px 10px;
+    padding: 10px 10px 20px;
     background: rgba(52,153,204,0.9);
 }
 #profileLinks a.wireframe-link {
@@ -187,7 +200,7 @@ a.wireframe-link-main {
     display: block;
     margin-bottom: 30px;
     text-align: center;
-    font-family: 'Montserrat', 'Oswald','helvetica',arial,sans-serif;
+    font-family: 'Helvetica Neue', 'Oswald','helvetica',arial,sans-serif;
     font-weight: 700;
     border-radius: 3px;
     border: 1px solid #900;
@@ -198,28 +211,38 @@ a.wireframe-link-main {
         background: #900;
         color: #FFF;
     }
+.section-head-plus {
+    padding: 0px 0px 0px;
+    margin-bottom: 40px;;
+    border-bottom: 2px solid rgba(0,0,0,0.3);
+}
 /* -- Services Section -------------------------- */
 #services {
-    background: url('../img/04-blackpaper.png') #111;
+    background: url('../img/00-whitepaper.jpg') #111;
     transition: all .25s;
-    background-attachment: fixed;
-    border-top: 3px solid #666;
+    
 }
 .section-title {
-    color: #ED3B27;
     padding: 80px 0px 0px;
     width: 100%;
     display: block;
     font-weight: 700;
-    font-size: 5rem;
-    line-height: 5rem;
-    margin-bottom: 10px;
-    text-shadow: -2px 2px 0px rgba(0,0,0,0.5);
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+}
+.section-title img {
+    width: 75px;
+    height: auto;
+}
+.resume-section h3{
+    margin-top: 25px;
+}
+.resume-section-title {
+    color: rgba(0,0,0,0.3);
 }
 .section-subtitle {
-    border-top: 2px solid #FFF;
-    padding-top: 10px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 60px;
 }
 .sub-section-title {
     width: 100%;
@@ -231,19 +254,18 @@ a.wireframe-link-main {
     border-bottom: 1px solid #FFF;
     padding-bottom: 5px;
 }
-.resume-section {
-    background: rgba(0,0,0,0.3);
-    padding: 30px;
-    margin-bottom: 30px;
+.summary-text {
+    border-bottom: 2px solid #000;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
 }
-.job .job-role {
-    color: #3499CC;
-    font-weight: 700;
-    font-size: 1.0rem;
-    line-height: 1.5rem;
-    }
 .job .job-dates {
     font-style: italic;
+    color: rgba(0,0,0,0.5);
+}
+.job .job-role {
+    font-weight: bold;
+    margin-bottom: 5px;;
 }
 .job .employer {
     font-size: 1rem;
@@ -254,12 +276,11 @@ a.wireframe-link-main {
 .web .port-item {
     padding-top: 200px;
     margin-bottom: 30px;
-    border-radius: 5px;;
+    border-radius: 0px;
 }
 .web .port-item .port-deets {
     padding: 20px 20px 30px;
     background: #FAFAFA;
-    box-shadow: 0px -0px 5px rgba(0,0,0,0.5);
     width: 100%;
 }
 .web .port-item .port-deets h3 {
@@ -272,8 +293,7 @@ a.wireframe-link-main {
 }
 /* -- Portfolio Section --------------- */
 #portfolio {
-    background: url('../img/03-whitepaper.png') #3499CC; 
-    border-top: 5px solid #000;
+    background: url('../img/01-whitepaper.png') #3499CC; 
 }
 #portfolio .section-title {
     color: #FFF;
@@ -334,16 +354,19 @@ a.wireframe-link-main {
 #references {
     background-attachment: fixed;
     background-size: 90%;
+    background: url('../img/00-whitepaper.jpg');
+    color: #000;
 }
 .reference-section {
     padding: 20px;
 }
+#references .section-title {
+    color: rgba(0,0,0,0.3);
+}
 .refer-head {
-    height: 200px;
-    width: 200px;
-    border-radius: 0px 200px 200px 200px;
-    border: 1px solid #FFF;
-    margin: 0px 15px 30px;
+    height: 230px;
+    border-radius: 0px 40px 40px 40px;
+    margin-bottom: 20px;
 }
 .referer i {
     font-weight: 300;
@@ -362,7 +385,10 @@ a.wireframe-link-main {
 }
 .brandon {
     background: url('../img/Brandon.jpg') no-repeat center center;
-    background-size: contain;
+    background-size: cover;
+}
+.port-section {
+    margin-top: 40px;
 }
 .port-section.web .row {
     margin: 0px 15px;
@@ -374,18 +400,18 @@ a.wireframe-link-main {
 /* -- Footer Section ---------------------------- */
 
 #ccFooter {
-    background: url('../img/01-whitepaper.png') #FFF;
-    border-top: 5px solid #000;
+    background: #FFF;
     padding: 20px;
     text-align: center;
     color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.3);
 }
 #ccFooter img {
     margin: 40px auto;
     fill: #FFF;
     max-width: 250px;
     display:block;
-    filter: contrast(.0);
+   
 }
 
 /* -- LIGHTBOX GALLERY -------------------------- */
@@ -398,10 +424,8 @@ body{
 .cplus-gallery > ul > li {
     float: left;
     margin-bottom: 15px;
-    width: 200px;
 }
 .cplus-gallery > ul > li a {
-  border-radius: 3px;
   display: block;
   overflow: hidden;
   position: relative;
@@ -508,20 +532,16 @@ body{
     padding: 15px;
 }
 #lightgallery li {
-    height: 250px;
     margin-bottom: 30px;
-    overflow: hidden;
-    border-radius: 5px;
 }
 #lightgallery li img {
     object-fit:contain;
-    border-radius: 5px;
+    border-radius: 0px;
 }
 #lightgallery li a button {
     position: absolute;
     top: 0px;
     left: 0%;
-    border-radius: 5px;
     border: none;
     background: rgba(52,153,204,0.7);
     color: #FFF;
@@ -534,7 +554,7 @@ vers a {
     color: #069;
     text-decoration: underline;
 }
-@media screen and (min-width: 760px) {
+@media screen and (min-width: 700px) {
     #tagline {
         position: absolute;
         bottom: 0px;
@@ -549,8 +569,8 @@ vers a {
       }
       #mobileNav img {
           display: inline-flex;
-          max-width: 150px;
-          padding-top: 10px;
+          max-width: 90px;
+          padding-top: 0px;
           align-self: center;
           justify-self: center;
           filter: contrast(0%) brightness(200%);
@@ -558,17 +578,22 @@ vers a {
     #mobileNav {
         position: fixed;
         top: 0px;
-        width: 100%;
-        background: #ED3B27;
-        border-bottom: 3px solid #900;
-        height: 70px;
-        font-size: 1.0rem;
+        width: 101%;
+        background: #000;
+        padding-bottom: 0px;
+        border-bottom: 2px solid #000;
+        height: 50px;
+        padding-top: 10px;
+        font-size: 0.75rem;
         letter-spacing: 1px;
-        text-transform: uppercase;
         font-weight: 500;
         z-index: 2;
-        line-height: 80px;
-        font-family: 'Montserrat', 'Helvetica Neue', helvetica, sans-serif;
+        line-height: 30px;
+        font-family: 'Helvetica Neue', 'Helvetica Neue', helvetica, sans-serif;
+      }
+      .mobNavItem {
+          width: 100%;
+          max-width: none;
       }
       #mobileNav div {
         justify-content: center;
@@ -578,15 +603,17 @@ vers a {
       #mobileNav div a {
           transform: translateY(0px);
           transition: all .25s;
-          text-shadow: 2px 2px 0px rgba(0,0,0,0.3);
       }
       #mobileNav div a:hover {
           color: #FFF;
-          transform: translateY(5px);
-          text-shadow: none;
+          transform: translateY(-4px);
       }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 700px) {
+    .brand-wrapper img {
+        position: relative;
+        top: -10px;
+    }
     .dsk-only {
         display: none;
     }
@@ -600,9 +627,10 @@ vers a {
         padding: 20px 10px 20px 20px;
         margin-left: -20px;
         height: 80px;
-        border-bottom: 3px solid #3499CC;
+        box-shadow: 0px 0px 6px rgba(0,0,0,0.3);
         top: 0px;
         background: #000;
+        width: 100%;
     }
     credits {
         position: relative;
@@ -625,7 +653,7 @@ vers a {
     #mobileNav{
         z-index: 4;
         height: 65px;
-        bottom: -15px;
+        bottom: -45px;
         left: 30px;
         padding-top: 10px;
         position: fixed;
@@ -635,26 +663,52 @@ vers a {
         display: flex;
         justify-content: space-around;
     }
-    #mobileNav div .col-md-3 {
+    #mobileNav .row a {
+        width: 60px;
+        margin: 5px;
+        left: -15px;
+    }
+    #mobileNav div .mobNavItem {
         text-align: center;
-        text-transform: uppercase;
-        padding: 0px 5px;
-        font-weight: 700;
-        font-size: .65rem;
+        padding: 0px;
+        font-weight: 500;
+        font-size: .5rem;
         line-height: 2.5rem;
         flex-wrap: nowrap;
-        height: 90px;
+        height: 60px;
         padding-top: 0px;
-        width: 90px;
-        border-radius: 200px;
-        background: rgba(52,153,204,0.9);
-        text-shadow: 2px 2px 0px rgba(0,0,0,0.5);
-        margin: -60px 5px 0px;
-        line-height: 90px;
-        border: 2px solid #FFF;
+        width: 60px;
+        max-width: 60px;
+        border-radius: 10px 10px 10px 0px;
+        background: rgba(52,153,204);
+        margin: 65px 5px 0px;
+        line-height: 60px;
+        border: 1px solid #069;
         box-sizing: border-box;
-        box-shadow: 0px 0px 2px #000;
+        left: 40px;
+        transition: all .5s ease .125s;
     }
+    #mobileNav div .mobNavItem.resNav {
+        background: url(../img/svg/resumeIcon.svg) no-repeat center 5px #3499CC;
+        background-size: 55%;
+    }
+    #mobileNav div .mobNavItem.portNav {
+        background: url(../img/svg/portfolioIcon.svg) no-repeat center 2px #3499CC;
+        background-size: 43%;
+    }
+    #mobileNav div .mobNavItem.refNav {
+        background: url(../img/svg/referencesIcon.svg) no-repeat center 5px #3499CC;
+        background-size: 70%;
+    }
+    #mobileNav .mobNavItem {
+        text-shadow: 0px 0px 2px #3499CC;
+    }
+    #mobileNav .mobNavItem span {
+        position: absolute;
+        top: 20px;
+        display: block;
+        width: 100%;
+      }
     a:hover{
         color: #3499CC !important;
     }
@@ -700,10 +754,11 @@ vers a {
           left: -1px;
           right: unset;
           padding: 5px 7px;
-          border-radius: 0px 10px 10px 0px;
+          border-radius: 0px 10px 10px 10px;
           top: unset;
           bottom: 10px;
-          background: #ED3B27
+          background: #ED3B27;
+          border: none;
       }
       #ccFooter {
           padding-bottom: 210px;
@@ -714,10 +769,4 @@ vers a {
     #lightgallery li {
         width: 100%;
     }
-    #mobileNav .col-md-3:last-child {
-        top: -100px;
-      }
-      #mobileNav .col-md-3:nth-child(3), #mobileNav .col-md-3:nth-child(2) {
-        right: -100px;
-      }
 }
